@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="edu.miu.cs473mobiledeviceprogramming.HomeFragment"
+        android:label="Cs473MobileDevicePrograming" >
+        <action
+            android:id="@+id/action_home_to_quiz"
+            app:destination="@id/quizresult" />
+        <action
+            android:id="@+id/action_home_to_lecture"
+            app:destination="@id/lecture" />
+
+        <action
+            android:id="@+id/action_home_to_assignment"
+            app:destination="@id/assignment" />
+
+        <action
+            android:id="@+id/action_home_to_courseInfo"
+            app:destination="@id/courseInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz"
+        android:name="edu.miu.cs473mobiledeviceprogramming.Quiz"
+        android:label="Quiz" >
+        <action
+            android:id="@+id/action_quiz_to_quizresult"
+            app:destination="@id/quizresult"
+            app:popUpTo="@+id/quizresult"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quiz_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizresult"
+        android:name="edu.miu.cs473mobiledeviceprogramming.QuizResult"
+        android:label="Final Result" >
+        <action
+            android:id="@+id/action_quizresult_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@+id/home" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="wrongAnswers"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignment"
+        android:name="edu.miu.cs473mobiledeviceprogramming.Assignment"
+        android:label="Assignment" >
+        <action
+            android:id="@+id/action_assignment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseInfo"
+        android:name="edu.miu.cs473mobiledeviceprogramming.CourseInfo"
+        android:label="Course Info" >
+        <action
+            android:id="@+id/action_courseInfo_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/lecture"
+        android:name="edu.miu.cs473mobiledeviceprogramming.Lecture"
+        android:label="LECTURE" >
+        <action
+            android:id="@+id/action_lecture_action_home"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>

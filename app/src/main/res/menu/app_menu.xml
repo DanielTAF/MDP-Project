@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/assignment"
+        android:enabled="true"
+        android:title="Assignment"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/lecture"
+        android:enabled="true"
+        android:title="Lecture"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/courseInfo"
+        android:enabled="true"
+        android:title="CourseInfo"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+
+
+
+    <item
+        android:id="@+id/quiz"
+        android:enabled="true"
+        android:title="Quiz"
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="Home"
+        android:visible="true"
+        app:showAsAction="always" />
+
+
+
+
+</menu>

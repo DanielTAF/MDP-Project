@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="quiz"
+            type="edu.miu.cs473mobiledeviceprogramming.Quiz" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MediumTextStyle"
+            tools:text="Which is the Independence day of Bangladesh?"
+            android:text="@{quiz.currentQuestion.theQuestion}"
+
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="@{quiz.answers[0]}"
+                    tools:text="Option1" />
+
+                <RadioButton
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="@{quiz.answers[1]}"
+                    tools:text="Option1" />
+
+                <RadioButton
+                    android:id="@+id/option3"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="@{quiz.answers[2]}"
+                    tools:text="Option1" />
+
+                <RadioButton
+                    android:id="@+id/option4"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="@{quiz.answers[3]}"
+                    tools:text="Option1" />
+
+
+                <Button
+                    android:id="@+id/next"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="  Next ">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/btnhome"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="Home ">
+
+                </Button>
+
+
+            </RadioGroup>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
