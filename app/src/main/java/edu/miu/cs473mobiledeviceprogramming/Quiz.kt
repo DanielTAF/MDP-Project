@@ -155,10 +155,6 @@ class Quiz : Fragment() {
             }
         }
     }
-
-
-
-
     fun clear() {
 
         option1.isChecked = false
