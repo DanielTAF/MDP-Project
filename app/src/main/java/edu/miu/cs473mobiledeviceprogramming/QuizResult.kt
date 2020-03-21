@@ -38,7 +38,7 @@ class QuizResult : Fragment() {
         super.onActivityCreated(savedInstanceState)
         arguments?.let {
             val args = QuizResultArgs.fromBundle(it)
-            var k= 9- args.score
+            var k= 15- args.score
 
 
 

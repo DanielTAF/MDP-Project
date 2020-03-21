@@ -22,31 +22,54 @@ class Quiz : Fragment() {
     lateinit var binding: FragmentQuizBinding
     lateinit var currentQuestion:Question
     private var questionIndex = 0
-    private val maxNumberOfQuestion = 9
+    private val maxNumberOfQuestion = 15
     lateinit var sharedPreferences: SharedPreferences
 
     var questions:ArrayList<Question> = arrayListOf(
-        Question("Which is the Independence day of USA?",
-            arrayListOf("26 March","21 Feb","14th April","16 December") ),
-        Question("Who is the first man landed on moon?",
-            arrayListOf("Neil Armstrong","Edwin Aldrin", "Michael Collins", "Yuri Gregory")),
-        Question("Socrates is best known for - ",
-            arrayListOf("Philosophy","Mathmetics","Physiology","Astrology")),
-        Question("How many states does USA have? ",
-            arrayListOf("50","45","55","49")),
-        Question("Which is  an African Country? ",
-            arrayListOf("Eritrea","Estonia","Lithunia","Moldova")),
-        Question("Who is the first President of USA? ",
-            arrayListOf("George Washington","William Henry Harrison","Abraham Lincoln","Franklin D. Roosevelt")),
-        Question("Which one is the largest ocean? ",
-            arrayListOf("Pacific","Atlantic","Mediterian","Arctic")),
-        Question("What country has a town named Marathon? ",
-            arrayListOf("USA","GREECE","ITALY","FRANCE")),
-        Question("What is the Economic System of united states",
-            arrayListOf("Capitalist","Socialist","Comunist","None")),
-        Question("What country was formerly known as Ceylon?",
-            arrayListOf("Sri Lanka","Sweden","Vietnam","Switzerland"))
+        Question("Kotlin is developed by?",
+            arrayListOf("jetBrains","Google","Oracle","Adobe") ),
+        Question("Which of the following is used to handle null exceptions in Kotlin?",
+            arrayListOf("Elvis operator","Range", "Sealed Class", "Lambda function")),
+        Question("How do you get the lengh of Kotlin? ",
+            arrayListOf("str.length","length(str)","str.lenghtOf"," str.size")),
+        Question("Can a class be immutable in android? ",
+            arrayListOf("Yes,class can be immutable","No,it can't","can'tmake the class as final class","None of the above")),
+        Question("What are the JSON elements in android? ",
+            arrayListOf("Number,String,boolean, null and object","Boolean","Ineger boolean","null")),
+        Question("How many ports are allocated for new emulator? ",
+            arrayListOf("2","0","10","Non of the above")),
+        Question("How to store heavy structured data in android? ",
+            arrayListOf("shared Preference","Cursor","Sqlite database","Not possible")),
+        Question(" What are the layouts available in android? ",
+            arrayListOf("Linear Layout","Frame Layout","Table Layout","Relative Layout")),
+        Question("Once installed on a device, each Android application lives in_______?",
+            arrayListOf("Security sandbox","device memory","external memory","None")),
+        Question("Parent class of Activity?",
+            arrayListOf("activityGroup","object","context","ContexThameWrapper")),
+
+                Question("What are the Direct subclasses of Activity?",
+        arrayListOf("activityGroup","object","context","ContexThameWrapper")),
+
+        Question("What are the Direct subclasses of Activity?",
+            arrayListOf("All","ListActivity","FragmentActivity","ActivityGroup")),
+
+
+        Question("Which component is not activated by an Intent?",
+            arrayListOf("contentProvider","activity","service","BroadcastReceiver")),
+
+
+        Question("Which are the  screen densities in Android?",
+
+            arrayListOf("All","low density","extra high density","medium density")),
+
+        Question("Which one is NOT related to fragment class?",
+            arrayListOf("cursor Fragment","dialogFragment","preferenceFragment","listFragment")),
+
+        Question("How many ways to start services?",
+            arrayListOf("started & bound","stated ","bound ","messenger"))
     )
+
+
 
     lateinit var answers:ArrayList<String>
 
@@ -109,21 +132,15 @@ class Quiz : Fragment() {
 
         }
 
-        sharedPreferences = activity!!.getSharedPreferences("SP_HIGH_SCORE", MODE_PRIVATE)
+
 
     }
 
     private fun checkAnswer(answer:String) {
         if (answer.equals(currentQuestion.answerGroup[0])) {
             score += 1
-
-
-
-        } else {
-            score2+=1
-
         }
-        allscore= score + score2
+
         resultList.add(currentQuestion.theQuestion)
         resultList.add(currentQuestion.answerGroup[0])
 

@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginTop="10dp"
-                android:text="Total Quations :9"
+                android:text="Total Quations :15"
                 android:textSize="22sp"></TextView>
 
             <TextView

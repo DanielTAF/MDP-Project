@@ -4,30 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
 
-    <data>
-        <variable
-            name="lect"
-            type="edu.miu.cs473mobiledeviceprogramming.Lecture" />
-    </data>
-    <LinearLayout
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfRecyclerId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WelCome"
-            android:textSize="70dp"
-            android:layout_gravity="center_horizontal"
-            android:textAllCaps="true"
-            android:textStyle="italic"
-            android:textColor="@color/colorPrimary"/>
-
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 </layout>

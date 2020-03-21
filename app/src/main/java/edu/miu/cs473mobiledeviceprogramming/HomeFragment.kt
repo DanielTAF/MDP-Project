@@ -1,4 +1,5 @@
 package edu.miu.cs473mobiledeviceprogramming
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
@@ -20,9 +21,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
-//        binding.btnPlay.setOnClickListener {
-//            Navigation.findNavController(it).navigate(R.id.action_titleFragment_to_quizFragment3)
-//        }
+
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -33,18 +32,17 @@ class HomeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(NavigationUI.onNavDestinationSelected(item,view!!.findNavController())){
+        if (NavigationUI.onNavDestinationSelected(item, view!!.findNavController())) {
             return true
+        } else {
+
+            return super.onOptionsItemSelected(item)
+
         }
-        return super.onOptionsItemSelected(item)
-
     }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        if(user==null){
-//            Navigation.findNavController(view!!).navigate(R.id.action_titleFragment_to_mainFragment)
-//        }
+
     }
 
 
